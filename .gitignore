@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# venv
+bin/
+include/
+local/
+
 # Distribution / packaging
 .Python
 build/
