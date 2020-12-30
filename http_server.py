@@ -1,10 +1,6 @@
 import web
 from vmware_helper import VwareHelper
-
-
-user = "administrator@vsphere.local"
-pw = "C1sc0-cdw"
-host = "10.89.49.9"
+import config
 
 URLS = (
         '/', 'root'
@@ -17,7 +13,7 @@ class root:
     def GET(self):
 
         vc = VwareHelper()
-        vc.connect(user, pw, host)
+        vc.connect(config.user, config.pw, config.host)
 
         header = "<html><head><title>test</title></head><body>\n"
 
